@@ -1,0 +1,491 @@
+/* GOOGLE FONTS  */
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+
+/* GLOBAL CSS START  */
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+body{
+	color: #666666;
+	font-family: 'Poppins', sans-serif;
+	font-size: 15px;
+	line-height: 1.80857;
+}
+a{
+    color: #1f1f1f;
+	text-decoration: none !important;
+	outline: none !important;
+}
+ul li{
+    list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	letter-spacing: 0;
+	font-weight: normal;
+	position: relative;
+	padding: 0 0 10px 0;
+	font-weight: normal;
+	line-height: 120% !important;
+	color: #1f1f1f;
+	margin: 0
+}
+
+h1 {
+	font-size: 24px
+}
+
+h2 {
+	font-size: 22px
+}
+
+h3 {
+	font-size: 18px
+}
+
+h4 {
+	font-size: 21px;
+	color: #07528d;
+	margin-top: 25px;
+}
+
+h5 {
+	font-size: 14px
+}
+
+h6 {
+	font-size: 13px
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	color: #212121;
+	text-decoration: none!important;
+	opacity: 1
+}
+
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover {
+	opacity: .8
+}
+.dark_bg{
+    width: 100%;
+    height: 100vh;
+    background: #212121;
+}
+.text_align_center{
+    text-align: center;
+}
+.center {
+	display: flex;
+	justify-content: center;
+}
+.margin-top_30 {
+	margin-top: 30px;
+}
+
+.padding_bottom_75px{
+    padding-bottom: 75px;
+}
+.white_fonts p,
+.white_fonts h1,
+.white_fonts h2,
+.white_fonts h3,
+.white_fonts h4,
+.white_fonts h5,
+.white_fonts h6,
+.white_fonts ul,
+.white_fonts ul li,
+.white_fonts ul li a,
+.white_fonts ul i,
+.white_fonts i,
+.white_fonts div,
+.white_fonts a {
+	color: #fff !important;
+}
+.img-responsive {
+	max-width: 100%;
+}
+
+/* GLOBAL CSS END  */
+
+/* PRELOADER CSS START  */
+
+#preloader{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    z-index: 99999;
+}
+.preloader{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    z-index: 99999;
+}
+.loader{
+    width: 800px;
+    height: auto;
+    display: block;
+    flex-wrap: wrap;
+}
+.loader img{
+    width: 100%;
+    height: auto;
+}
+
+/* PRELOADER CSS END  */
+
+/* Door Part CSS Start  */
+
+.main-content{
+    border: 15px solid #B92C3F;
+    height: 100vh;
+    margin: auto;
+    box-shadow: 0 10px 10px #000;
+    overflow: hidden;
+    position: relative;
+}
+.main-content img{
+    width: inherit;
+    height: inherit;
+    transition: all .6s linear;
+}
+.main-content:hover img{
+    transform: scale(1.2,1.2);
+}
+.door-left{
+    background: url(../img/20201224_220159.jpg) no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    transform: perspective(400px) rotateY(0deg);
+    transform-origin: left;
+    transition: all 1s ;
+    box-shadow: 0 10px 10px black;
+}
+.main-content:hover .door-left {
+    transform: perspective(400px) rotateY(90deg);
+}
+.door-right{
+    background: url(../img/20201224_220048.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    transform: perspective(400px) rotateY(0deg);
+    transform-origin: right;
+    transition: all 0.8s;
+    box-shadow: 0 10px 10px black;
+}
+.main-content:hover .door-right {
+    transform: perspective(400px) rotateY(-90deg);
+
+}
+.overlay{
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all .6s ease-in;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-content:hover .overlay{
+    opacity: 1;
+}
+.icon a i{
+    font-size: 70px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-35%,-50%);
+    transition: all .6s linear;
+    border-radius: 50%;
+}
+.icon a i:hover{
+    font-size: 80px;
+    color: #fff;
+    box-shadow: 0 0 30px 0 #fff;
+    background: #fff;
+}
+
+/* Door Part CSS End  */
+
+/* COUNTDOWN PART START  */
+.full{
+    width: 100%;
+    border: solid #fff 1px;
+    box-shadow: 0 0 30px 0 #fff;
+    padding: 30px;
+    margin-top: 10px;
+    background: #ffffff;
+}
+
+.full img{
+    width: 200px;
+    margin: 0 auto;
+    display: block;
+}
+.theme_color {
+	color: #f2184f;
+}
+h3.small_heading {
+	font-size: 35px;
+	font-weight: 600;
+	line-height: normal;
+}
+.full h2 {
+    font-size: 40px;
+    letter-spacing: -0.5px;
+    font-weight: 600;
+    padding: 0;
+    color: #fff;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+}
+p {
+	margin-top: 5px;
+	margin-bottom: 1rem;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: normal;
+}
+.full p{
+    font-family: 'Raleway', sans-serif;
+}
+
+p.small_tag {
+    color: #fff;
+    font-size: 30px;
+    text-transform: uppercase;
+    line-height: normal;
+    font-weight: 600;
+}
+.count-down{
+    display: flex;
+    margin: 0 auto;
+}
+.count_down{
+    position: relative;
+    border: 2px solid #000;
+    box-shadow: 0 0 30px 0 #fff;
+    padding: 20px 0;
+    margin: 0 5px;
+    background: #262626;
+}
+.count_down:last-child{
+    background: #ff2020;
+}
+.count_down::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: rgba(255, 255, 255, .2);
+}
+
+.count_down .count-title{
+    display: block;
+    color: #fff;
+    font-size: 80px;
+    font-weight: 800;
+    margin-top: 15px;
+}
+.count_down .count-text{
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 800;
+    margin-top: -20px;
+}
+
+/* COUNTDOWN PART END  */
+
+#back-to-home{
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	top: 20px;
+	left: 25px;
+	display: block;
+	font-size: 25px;
+	border-radius: 0;
+	transition: .2s;
+	letter-spacing: 1px;
+	text-align: center;
+    line-height: 40px;
+    color: #000;
+    background: #fff;
+	font-weight: 900;
+	border-radius: 100%;
+}
+#back-to-top{
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	bottom: 10px;
+	right: 20px;
+	display: none;
+	font-size: 25px;
+	border-radius: 0;
+	transition: .2s;
+	letter-spacing: 1px;
+	text-align: center;
+	line-height: 40px;
+	color: #ffffff;
+	font-weight: 900;
+	border-radius: 100%;
+}
+.hvr-radial-out {
+	display: inline-block;
+	vertical-align: middle;
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	position: relative;
+	overflow: hidden;
+	background: #070500;
+	transition-property: color;
+	transition-duration: 0.3s;
+	color: #fff;
+	width: 165px;
+	height: 45px;
+	text-align: center;
+	line-height: 45px;
+}
+
+.hvr-radial-out::before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #f43866;
+	border-radius: 100%;
+	transform: scale(0);
+	transition-property: transform;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;
+}
+
+.hvr-radial-out:hover::before,
+.hvr-radial-out:focus::before,
+.hvr-radial-out:active::before {
+	transform: scale(2);
+}
+
+a.hvr-radial-out:hover,
+a.hvr-radial-out:focus {
+	color: #fff;
+}
+/* RESPONSIVE CSS START  */
+
+/* mobile or only mobile */
+@media (max-width: 767px){
+    .main-content{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+        height: auto;
+    }
+    .icon a i{
+        font-size: 20px;
+    }
+    .icon a i:hover{
+        font-size: 25px;
+    }
+    #back-to-home{
+        top: 20px;
+        left: 25px;
+        background: #000;
+        color: #fff;
+    }
+    .count-down{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .count_down{
+        display: block;
+        margin: 10px;
+    }
+    .dark_bg{
+        width: 100%;
+        height: 100%;
+    }
+}
+/* only small tablets */
+@media (min-width: 768px) and (max-width: 991px){
+
+    .main-content{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+        height: auto;
+    }
+    .icon a i{
+        font-size: 25px;
+    }
+    .icon a i:hover{
+        font-size: 30px;
+    }
+    #back-to-home{
+        top: 20px;
+        left: 25px;
+        background: #000;
+        color: #fff;
+    }
+
+}
+
+/* RESPONSIVE CSS END  */
